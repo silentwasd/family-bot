@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "westacks/telebot": "^1.10"
+        "westacks/telebot": "^1.10",
+      "ext-yaml": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
