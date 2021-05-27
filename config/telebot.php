@@ -59,7 +59,8 @@ return [
                 ShoppingList\RemoveAllItems::class,
                 ShoppingList\AllItemsBought::class,
                 ShoppingList\AllItemsUnbought::class,
-                Fun\SentenceGenerator::class
+                Fun\MakeSentence::class,
+                Fun\MakeVerse::class
             ],
         ],
 
