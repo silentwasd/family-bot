@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'ucams' => [
+        'username' => env('UCAMS_USERNAME'),
+        'password' => env('UCAMS_PASSWORD')
+    ]
+
 ];
