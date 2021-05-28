@@ -9,7 +9,7 @@ use App\Services\Telegram\UpdateHandlers\MatchHandler;
 
 class ShowBuyList extends MatchHandler
 {
-    protected string $pattern = '/^что надо купить(\?*)$/iu';
+    protected string $pattern = '/^(что надо купить|что купить)(\?*)$/iu';
 
     protected function matched(array $matches = []): string
     {

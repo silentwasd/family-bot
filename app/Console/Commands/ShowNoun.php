@@ -46,9 +46,16 @@ class ShowNoun extends Command
             return 1;
         }
 
-        $this->info('Род: '.$noun->genus);
-
+        $this->info('Основные свойства:');
+        $this->table([
+            'Свойство',
+            'Значение'
+        ], [
+            ['Род', $noun->genus],
+            ['Одушевленный?', $noun->animated ? 'да': 'нет']
+        ]);
         $this->newLine();
+
         $this->info('Падежи:');
 
         $this->table([

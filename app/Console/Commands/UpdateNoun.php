@@ -61,6 +61,7 @@ class UpdateNoun extends Command
         $noun->plural_prepositional = $this->ask('Предложный в мн. числе', $noun->plural_prepositional);
 
         $noun->genus = $this->askWithCompletion('Род', ['муж', 'жен', 'ср'], $noun->genus);
+        $noun->animated = $this->confirm('Существительное обозначает одушевленный объект?', $noun->animated);
 
         $noun->save();
 

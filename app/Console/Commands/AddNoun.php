@@ -47,6 +47,8 @@ class AddNoun extends Command
         $noun->singular_instrumental = $this->ask('Творительный в ед. числе');
         $noun->singular_prepositional = $this->ask('Предложный в ед. числе');
 
+        $noun->save();
+
         $noun->plural_nominative = $this->ask('Именительный в мн. числе');
         $noun->plural_genitive = $this->ask('Родительный в мн. числе');
         $noun->plural_dative = $this->ask('Дательный в мн. числе');
@@ -54,7 +56,10 @@ class AddNoun extends Command
         $noun->plural_instrumental = $this->ask('Творительный в мн. числе');
         $noun->plural_prepositional = $this->ask('Предложный в мн. числе');
 
+        $noun->save();
+
         $noun->genus = $this->askWithCompletion('Род', ['муж', 'жен', 'ср'], 'муж');
+        $noun->animated = $this->confirm('Существительное обозначает одушевленный объект?', false);
 
         $noun->save();
 

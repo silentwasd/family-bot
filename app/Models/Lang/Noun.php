@@ -44,6 +44,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Noun whereSingularPrepositional($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Noun whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property int $animated
+ * @method static \Illuminate\Database\Eloquent\Builder|Noun whereAnimated($value)
  */
 class Noun extends Model
 {
