@@ -9,7 +9,7 @@ use WeStacks\TeleBot\Objects\InputFile;
 
 class GetPreviewForNow extends \App\Services\Telegram\UpdateHandlers\MatchHandler
 {
-    protected string $pattern = '/^что сейчас на улице(\?*)$/iu';
+    protected string $pattern = '/^покажи улицу$/iu';
 
     protected function matched(array $matches = []): string
     {
