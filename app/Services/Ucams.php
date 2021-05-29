@@ -34,7 +34,8 @@ class Ucams
     {
         $in = base_path($in);
         $out = base_path($out);
-        exec("echo y | ffmpeg -ss 00:00:00 -i $in -vframes 1 -q:v 2 $out");
+        $log = storage_path('logs/ucams.log');
+        exec("echo y | ffmpeg -ss 00:00:00 -i $in -vframes 1 -q:v 2 $out > $log 2>&1");
     }
 
     public function sessionId(): string
