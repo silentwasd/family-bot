@@ -13,6 +13,11 @@ class GetPreviewForNow extends \App\Services\Telegram\UpdateHandlers\MatchHandle
 
     protected function matched(array $matches = []): string
     {
+        $this->bot->sendMessage([
+            'chat_id' => $this->update->message->chat->id,
+            'text' => 'Подождите...'
+        ]);
+
         /** @var Ucams $ucams */
         $ucams = resolve(Ucams::class);
 

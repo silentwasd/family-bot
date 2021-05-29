@@ -18,7 +18,7 @@ class Ucams
         $token = $this->archiveToken($sid, $cam['number']);
 
         $response = Http::get($this->previewUrl($cam['server'], $cam['number'],
-            Carbon::now()->utc()->subSeconds(30)), [
+            Carbon::now()->utc()->subSeconds(15)), [
                 'token' => $token
         ]);
 
