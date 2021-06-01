@@ -54,14 +54,17 @@ class Ucams
             $sessionId = $sessionIdCookie['Value'];
             $sessionIdExpires = $sessionIdCookie['Expires'];
 
-            Cache::put('ucams/sessionId', $sessionId, Carbon::createFromTimestamp($sessionIdExpires));
+            Cache::put('ucams/sessionId', $sessionId, 3600 * 24);
             return $sessionId;
         } else {
             return Cache::get('ucams/sessionId');
         }
     }
 
-    #[ArrayShape(['number' => "string", 'server' => "string"])] public function cameraData(string $sessionId): array
+    #[ArrayShape([
+        'number' => "string",
+        'server' => "string"
+    ])] public function cameraData(string $sessionId): array
     {
         if (!Cache::has('ucams/cameraNumber')) {
             $response = Http::withCookies(['sessionid' => $sessionId], 'ucams.ufanet.ru')
