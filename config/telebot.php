@@ -2,7 +2,6 @@
 
 use App\Services\Telegram\UpdateHandlers\HelloHandler;
 use App\Services\Telegram\UpdateHandlers\ShoppingList;
-use App\Services\Telegram\UpdateHandlers\Fun;
 use App\Services\Telegram\UpdateHandlers\Ucams;
 
 return [
@@ -60,8 +59,6 @@ return [
                 ShoppingList\RemoveAllItems::class,
                 ShoppingList\AllItemsBought::class,
                 ShoppingList\AllItemsUnbought::class,
-                Fun\MakeSentence::class,
-                Fun\MakeVerse::class,
                 Ucams\GetPreviewForNow::class
             ],
         ],
